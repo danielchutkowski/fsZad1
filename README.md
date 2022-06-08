@@ -1,7 +1,11 @@
 #LABORATORIUM:
+
 ##PROGRAMOWANIE FULL-STACK W CHMURACH OBLICZENIOWYCH
+
 ##Zadanie 1
+
 ###1. 
+
 Proszę napisać program serwera (dowolny język programowania), który realizować będzie
 następującą funkcjonalność:
 a. po uruchomieniu kontenera, serwer pozostawia w logach informację o dacie
@@ -10,32 +14,41 @@ TCP, na którym serwer nasłuchuje na zgłoszenia klienta.
 b. na podstawie adresu IP klienta łączącego się z serwerem, w przeglądarce powinna zostać
 wyświetlona strona informująca o adresie IP klienta i na podstawie tego adresu IP, o dacie
 i godzinie w jego strefie czasowej. 
-#
+
+
 Rozwiązanie punktu znajduje się w pliku server.js zlokalizowanym w folderze server  
-#
+
+
 ###2.
+
 Opracować plik Dockerfile, który pozwoli na zbudowanie obrazu kontenera realizującego
 funkcjonalność opisaną w punkcie 1. Przy ocenie brane będzie sposób opracowania tego pliku
 (dobór obrazu bazowego, wieloetapowe budowanie obrazu, ewentualne wykorzystanie warstwy
 scratch, optymalizacja pod kątem funkcjonowania cache-a w procesie budowania). Dockerfile
 powinien również zawierać informację o autorze tego pliku (ponownie imię i nazwisko studenta).
-#
+
+
 Plik Dockerfile znajduje się w folderze server
-#
+
+
 ###3. 
+
 Należy podać polecenia niezbędne do:
 
 (polecenia należy wykonać będąc w filerze server)
 ####a. 
+
 zbudowania opracowanego obrazu kontenera,
 
 `docker build . -t daniel6657/zad1`
 ####b. 
+
 uruchomienia kontenera na podstawie zbudowanego obrazu,
 
 `docker run -p 3333:3333 -d --name node_server daniel6657/zad1`
 
 ####c. 
+
 sposobu uzyskania informacji, które wygenerował serwer w trakcie uruchamiana kontenera
 (patrz: punkt 1a),
 
@@ -53,6 +66,7 @@ Po uruchomieniu adresu `localhost:3333` w przeglądarce zobaczymy informacje kt�
 ![img.png](img.png)
 
 ####d. 
+
 sprawdzenia, ile warstw posiada zbudowany obraz
 
 `docker history daniel6657/zad1`
@@ -70,6 +84,7 @@ IMAGE          CREATED         CREATED BY                                      S
 <missing>      23 hours ago    ADD alpine-minirootfs-3.15.4-aarch64.tar.gz …   5.32MB    buildkit.dockerfile.v0
 ```
 ###4.
+
 Zbudować obrazy kontenera z aplikacją opracowaną w punkcie nr 1, które będą pracował na
 architekturach: linux/arm/v7, linux/arm64/v8 oraz linux/amd64. Obrazy te należy przesłać do
 swojego repozytorium na DockerHub.
