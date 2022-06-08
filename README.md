@@ -1,10 +1,10 @@
-#LABORATORIUM:
+# LABORATORIUM:
 
-##PROGRAMOWANIE FULL-STACK W CHMURACH OBLICZENIOWYCH
+## PROGRAMOWANIE FULL-STACK W CHMURACH OBLICZENIOWYCH
 
-##Zadanie 1
+## Zadanie 1
 
-###1. 
+### 1. 
 
 Proszę napisać program serwera (dowolny język programowania), który realizować będzie
 następującą funkcjonalność:
@@ -19,7 +19,7 @@ i godzinie w jego strefie czasowej.
 Rozwiązanie punktu znajduje się w pliku server.js zlokalizowanym w folderze server  
 
 
-###2.
+### 2.
 
 Opracować plik Dockerfile, który pozwoli na zbudowanie obrazu kontenera realizującego
 funkcjonalność opisaną w punkcie 1. Przy ocenie brane będzie sposób opracowania tego pliku
@@ -31,23 +31,23 @@ powinien również zawierać informację o autorze tego pliku (ponownie imię i 
 Plik Dockerfile znajduje się w folderze server
 
 
-###3. 
+### 3. 
 
 Należy podać polecenia niezbędne do:
 
 (polecenia należy wykonać będąc w filerze server)
-####a. 
+#### a. 
 
 zbudowania opracowanego obrazu kontenera,
 
 `docker build . -t daniel6657/zad1`
-####b. 
+#### b. 
 
 uruchomienia kontenera na podstawie zbudowanego obrazu,
 
 `docker run -p 3333:3333 -d --name node_server daniel6657/zad1`
 
-####c. 
+#### c. 
 
 sposobu uzyskania informacji, które wygenerował serwer w trakcie uruchamiana kontenera
 (patrz: punkt 1a),
@@ -65,7 +65,7 @@ Serwer nasłuchuje na porcie 3333`
 Po uruchomieniu adresu `localhost:3333` w przeglądarce zobaczymy informacje które chcieliśmy wyświetlić.
 ![img.png](img.png)
 
-####d. 
+#### d. 
 
 sprawdzenia, ile warstw posiada zbudowany obraz
 
@@ -83,7 +83,7 @@ IMAGE          CREATED         CREATED BY                                      S
 <missing>      20 hours ago    WORKDIR /usr/src/app                            0B        buildkit.dockerfile.v0
 <missing>      23 hours ago    ADD alpine-minirootfs-3.15.4-aarch64.tar.gz …   5.32MB    buildkit.dockerfile.v0
 ```
-###4.
+### 4.
 
 Zbudować obrazy kontenera z aplikacją opracowaną w punkcie nr 1, które będą pracował na
 architekturach: linux/arm/v7, linux/arm64/v8 oraz linux/amd64. Obrazy te należy przesłać do
